@@ -1,5 +1,5 @@
 {
-    "name": "eduardoarandah/backpackusermanager",
+    "name": "momenoor/backpackusermanager",
     "description": "Users management interface for Laravel using Backpack CRUD.",
     "keywords": [
         "laravel backpack",
@@ -11,13 +11,13 @@
         "laravel user management",
         "Eduardo Aranda"
     ],
-    "homepage": "https://github.com/eduardoarandah/UserManager",
+    "homepage": "https://github.com/momenoor/BackpackUserManager",
     "license": "MIT",
     "authors": [
         {
-            "name": "Eduardo Aranda",
-            "email": "eduardoarandah@gmail.com",
-            "homepage": "https://eduardoarandah.github.io/"
+            "name": "Momen Noor",
+            "email": "momen.noor@gmail.com",
+            "homepage": "https://mie.systems/"
         }        
     ],
     "require": {
