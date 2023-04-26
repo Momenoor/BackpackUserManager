@@ -94,7 +94,7 @@ composer require momenoor/backpackusermanager
 
 2) For Laravel <5.5, add the service provider to your config/app.php file:
 ```php
-EduardoArandaH\UserManager\UserManagerServiceProvider::class,
+Momenoor\UserManager\UserManagerServiceProvider::class,
 ```
 
 3) Use the following traits on your User model:
