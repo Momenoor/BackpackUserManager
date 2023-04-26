@@ -16,7 +16,7 @@ An admin interface to easily add/edit/remove users, using [Backpack for Laravel]
 1) In your terminal:
 
 ```bash
-composer require eduardoarandah/usermanager
+composer require momenoor/backpackusermanager
 ```
 
 2) Add Backpack's CrudTrait on your User model:
@@ -52,7 +52,7 @@ php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-lin
 1) In your terminal:
 
 ```bash
-composer require eduardoarandah/usermanager
+composer require momenoor/backpackusermanager
 ```
 
 2) Add Backpack's CrudTrait on your User model:
@@ -90,7 +90,7 @@ php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-lin
 1) In your terminal:
 
 ```bash
-composer require eduardoarandah/usermanager
+composer require momenoor/backpackusermanager
 ```
 
 2) For Laravel <5.5, add the service provider to your config/app.php file:
