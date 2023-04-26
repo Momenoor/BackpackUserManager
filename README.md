@@ -33,14 +33,13 @@ class BackpackUser extends User
     // ...
 ```
 
-3) [Optional] If your User model is NOT `App\User::class` or your users table is not `users`, you should publish this package's config file and correct those assumptions in the `config/eduardoarandah/usermanager.php` file. To publish file, run:
+3) [Optional] If your User model is NOT `App\User::class` or your users table is not `users`, you should publish this package's config file and correct those assumptions in the `config/momenoor/usermanager.php` file. To publish file, run:
 
 ```bash
-php artisan vendor:publish --provider="EduardoArandaH\UserManager\UserManagerServiceProvider" --tag='config'
+php artisan vendor:publish --provider="Momenoor\UserManager\UserManagerServiceProvider" --tag='config'
 ```
 
 4) [Optional] Add a sidebar link
-
 ```bash
 php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-link' href='{{ backpack_url('user') }}'><i class='nav-icon la la-user'></i> <span>Users</span></a></li>"
 ```
@@ -125,20 +124,20 @@ php artisan backpack:base:add-sidebar-content "<li><a href='{{ backpack_url('use
 
 When you need more control on your user model, the best way is copying the code.
 
-**You can even make your own** CRUD controller with `php artisan backpack:crud user` and simply add `handlePasswordInput` `addFields` methods in `src/app/Http/Controllers/UserCrudController`. [See code](https://github.com/eduardoarandah/UserManager/blob/master/src/app/Http/Controllers/UserCrudController.php)
+**You can even make your own** CRUD controller with `php artisan backpack:crud user` and simply add `handlePasswordInput` `addFields` methods in `src/app/Http/Controllers/UserCrudController`. [See code](https://github.com/Momenoor/UserManager/blob/master/src/app/Http/Controllers/UserCrudController.php)
 
 ### To copy source code into your project
 
-Go to `vendor/eduardoarandah/usermanager/src` and copy: 
+Go to `vendor/momenoor/usermanager/src` and copy: 
 
-- Route: `routes/eduardoarandah/usermanager.php` in your `routes/web.php` file
+- Route: `routes/momenoor/usermanager.php` in your `routes/web.php` file
 - Controller `app/Http/Controllers/UserCrudController.php` inside your `app/Http/Controllers` folder
 - Requests `app/Http/Requests/*` inside your `app/Http/Controllers` folder
 - In UserCrudController set the model, example:
 
 	$this->crud->setModel('App\User'));
 
-- In every file, replace my namespace `EduardoArandaH\UserManager\app\Http\Requests` for `App\Http\Requests`
+- In every file, replace my namespace `Momenoor\UserManager\app\Http\Requests` for `App\Http\Requests`
 
 Now you can remove the package with composer: 
 
@@ -159,6 +158,6 @@ composer remove eduardoarandah/usermanager
 ## Upgrade from Backpack 4.0 to 4.1
 
 To successfully use this package after you upgrade your project from Backpack 4.0 to Backpack 4.1, you need to:
-- require version ```^3.0``` of this package by changing your ```composer.json``` file or running ```composer require eduardoarandah/usermanager:"^3.0"```;
+- require version ```^3.0``` of this package by changing your ```composer.json``` file or running ```composer require momenoor/usermanager:"^3.0"```;
 - (most likely) change the user model in the usermanager config file from ```App\Models\BackpackUser::class``` to ```App\User::class```;
 - (less likely) if you've extended the UserCrudController in this package and you've modified the ```handlePasswordInput()``` function, you also need to take account that the crud request in now fetched using setters and getters instead of directly as a property; take a closer look at [Step 11](https://backpackforlaravel.com/docs/4.1/upgrade-guide#step-11) in the Backpack 4.1 upgrade guide, or look at the new code in this package for inspiration;
