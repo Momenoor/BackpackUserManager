@@ -1,11 +1,11 @@
 <?php
 
-namespace EduardoArandaH\UserManager\app\Http\Controllers;
+namespace Momenoor\UserManager\app\Http\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Http\Requests\CrudRequest;
-use EduardoArandaH\UserManager\app\Http\Requests\UserStoreCrudRequest as StoreRequest;
-use EduardoArandaH\UserManager\app\Http\Requests\UserUpdateCrudRequest as UpdateRequest;
+use Momenoor\UserManager\app\Http\Requests\UserStoreCrudRequest as StoreRequest;
+use Momenoor\UserManager\app\Http\Requests\UserUpdateCrudRequest as UpdateRequest;
 
 class UserCrudController extends CrudController
 {
@@ -16,8 +16,8 @@ class UserCrudController extends CrudController
 
     public function setup()
     {
-        $this->crud->setModel(config('eduardoarandah.usermanager.user_model'));
-        $this->crud->setEntityNameStrings(trans('eduardoarandah::usermanager.user'), trans('eduardoarandah::usermanager.users'));
+        $this->crud->setModel(config('Momenoor.usermanager.user_model'));
+        $this->crud->setEntityNameStrings(trans('Momenoor::usermanager.user'), trans('Momenoor::usermanager.users'));
         $this->crud->setRoute(config('backpack.base.route_prefix').'/user');
     }
 
@@ -26,12 +26,12 @@ class UserCrudController extends CrudController
         $this->crud->setColumns([
             [
                 'name'  => 'name',
-                'label' => trans('eduardoarandah::usermanager.name'),
+                'label' => trans('Momenoor::usermanager.name'),
                 'type'  => 'text',
             ],
             [
                 'name'  => 'email',
-                'label' => trans('eduardoarandah::usermanager.email'),
+                'label' => trans('Momenoor::usermanager.email'),
                 'type'  => 'email',
             ]
         ]);
@@ -85,22 +85,22 @@ class UserCrudController extends CrudController
         $this->crud->addFields([
             [
                 'name'  => 'name',
-                'label' => trans('eduardoarandah::usermanager.name'),
+                'label' => trans('Momenoor::usermanager.name'),
                 'type'  => 'text',
             ],
             [
                 'name'  => 'email',
-                'label' => trans('eduardoarandah::usermanager.email'),
+                'label' => trans('Momenoor::usermanager.email'),
                 'type'  => 'email',
             ],
             [
                 'name'  => 'password',
-                'label' => trans('eduardoarandah::usermanager.password'),
+                'label' => trans('Momenoor::usermanager.password'),
                 'type'  => 'password',
             ],
             [
                 'name'  => 'password_confirmation',
-                'label' => trans('eduardoarandah::usermanager.password_confirmation'),
+                'label' => trans('Momenoor::usermanager.password_confirmation'),
                 'type'  => 'password',
             ]
         ]);

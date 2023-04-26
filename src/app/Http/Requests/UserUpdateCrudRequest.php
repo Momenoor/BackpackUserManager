@@ -1,6 +1,6 @@
 <?php
 
-namespace EduardoArandaH\UserManager\app\Http\Requests;
+namespace Momenoor\UserManager\app\Http\Requests;
 
 use Backpack\CRUD\app\Http\Requests\CrudRequest;
 
